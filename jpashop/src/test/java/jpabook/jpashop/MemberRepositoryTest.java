@@ -24,9 +24,10 @@ class MemberRepositoryTest {
     public void testMember() throws Exception {
         //given
         Member member = new Member();
-        member.setId();
+        long var = 2733;
+        member.setId(var);
 
-
+        
         //when
         Long savedId = memberRepository.save(member);
         Member findMember = memberRepository.find(savedId);
