@@ -27,7 +27,7 @@ class MemberRepositoryTest {
         long var = 2733;
         member.setId(var);
 
-        
+
         //when
         Long savedId = memberRepository.save(member);
         Member findMember = memberRepository.find(savedId);

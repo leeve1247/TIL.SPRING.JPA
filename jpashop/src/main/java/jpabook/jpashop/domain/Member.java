@@ -2,6 +2,7 @@ package jpabook.jpashop.domain;
 
 
 
+import jpabook.jpashop.domain.item.Order;
 import lombok.Getter;
 import lombok.Setter;
 
