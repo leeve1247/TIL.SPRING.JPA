@@ -1,6 +1,7 @@
 package jpabook.jpashop;
 
 
+import jpabook.jpashop.domain.Member;
 import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -23,7 +24,7 @@ class MemberRepositoryTest {
     public void testMember() throws Exception {
         //given
         Member member = new Member();
-        member.setUsername("memberA");
+        member.setId();
 
 
         //when
@@ -37,6 +38,4 @@ class MemberRepositoryTest {
         System.out.println("findMember == member" + (findMember == member));
 
     }
-
-
 }
