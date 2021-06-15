@@ -47,14 +47,6 @@ class MemberServiceTest {
 
         //when
         memberService.join(member1);
-        try {
-            memberService.join(member2); //여기서 예외 발생 필요
-        } catch (IllegalStateException e){
-            return;
-        }
-        //then
-        //예외가 안터지면 여기에 도달
-        org.junit.jupiter.api.Assertions.fail("예외가 발생해야 한다.");
+        assertThrows(IllegalStateException.class, ()-> memberService.join(member2));
     }
-
 }
