@@ -21,6 +21,7 @@ public class MemberService {
     //field only
     //생성자가 단 하나일 경우 스프링이 스스로 @Autowired 로 처리해준다.
     //이 생성자를 만들어 주는 것이 Lombok의 @AllArgsConstructor
+    //상위 호환이 @RequiredArgsConstructor **RequiredArgsconstructior는 final이 있는 필드만 생성자를 형성해줌
     /**
      public MemberService(MemberRepository memberRepository){
      this.memberRepository = memberRepository;

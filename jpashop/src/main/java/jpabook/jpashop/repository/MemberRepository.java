@@ -14,7 +14,7 @@ public class MemberRepository {
 
     //여기 Entity Manager를 Bean에 주입
     //@PersistenceContext -> @Autowired 로 대체 가능
-    private EntityManager em;
+    private final EntityManager em;
 
 //    public MemberRepository(EntityManager em){
 //        this.em = em;
