@@ -31,7 +31,7 @@ public abstract class Item {
 
     //==비즈니스 로직==//
     //데이터가 있는곳에 메서드가 있는 것이 응집력이 높아 관리가 편해서 좋다.
-
+    //Setter를 써가지고 바꾸는 건 곤란합니다.
     /**
      * stock 증가
      */
@@ -42,10 +42,10 @@ public abstract class Item {
     /**
      * stock 감소
      */
-    public void addstock(int quantity){
+    public void removestock(int quantity){
         int restStock = this.stockQuantity -= quantity;
         if (restStock < 0) {
-            throw new NotEnoughStockException("need more stock")
+            throw new NotEnoughStockException("need more stock");
         }
         this.stockQuantity = restStock;
     }
