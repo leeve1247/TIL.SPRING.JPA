@@ -49,4 +49,6 @@ public abstract class Item {
         }
         this.stockQuantity = restStock;
     }
+
+    public abstract void addStock(int count);
 }
