@@ -35,20 +35,18 @@ public abstract class Item {
     /**
      * stock 증가
      */
-    public void addstock(int quantity){
+    public void addStock(int quantity){
         this.stockQuantity += quantity;
     }
 
     /**
      * stock 감소
      */
-    public void removestock(int quantity){
+    public void removeStock(int quantity){
         int restStock = this.stockQuantity -= quantity;
         if (restStock < 0) {
             throw new NotEnoughStockException("need more stock");
         }
         this.stockQuantity = restStock;
     }
-
-    public abstract void addStock(int count);
 }
