@@ -42,6 +42,10 @@ public class OrderItem {
         getItem().addStock(count);
     }
 
+    //==조회 로직==/
+    /**
+     * 주문 상품 전체 조회
+     */
     public int getTotalPrice(){
         return getOrderPrice() * getCount();
     }
